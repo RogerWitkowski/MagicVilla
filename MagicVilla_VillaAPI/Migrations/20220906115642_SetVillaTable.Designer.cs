@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220906115642_SetVillaTable")]
+    partial class SetVillaTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,65 +72,65 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 6, 14, 2, 10, 103, DateTimeKind.Local).AddTicks(1249),
-                            Details = "Distinctio quam et inventore alias et facilis deserunt explicabo eos dolores quia fugit amet.",
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Details = "Non et tempora esse suscipit magni sed debitis qui voluptatem voluptatem velit.",
                             ImageUrl = "https://i.picsum.photos/id/778/200/200.jpg?hmac=fgFK_HI_g_N4MzYuYbssOB8ymhT_m0JK61tNJHfdPYU",
-                            Name = "Ms. Easton DuBuque",
-                            Occupancy = 3,
-                            Rate = 11.0,
-                            Sqft = 451,
+                            Name = "Ms. Owen Hans Runolfsson",
+                            Occupancy = 9,
+                            Rate = 14.0,
+                            Sqft = 146,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 6, 14, 2, 10, 103, DateTimeKind.Local).AddTicks(5655),
-                            Details = "Vero quo sunt veritatis voluptatibus alias itaque et dolores quae et eos libero quia eos.",
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Details = "Nemo dolores consectetur ut exercitationem deleniti omnis inventore voluptas consequatur nihil.",
                             ImageUrl = "https://i.picsum.photos/id/287/200/200.jpg?hmac=kXFCSMZE2rF7NM-EFSH6c_nl5HlKQWvwCdE8JYL-YNQ",
-                            Name = "Vicente Schuster Jr.",
+                            Name = "Suzanne Jacobi",
                             Occupancy = 1,
-                            Rate = 13.0,
-                            Sqft = 493,
+                            Rate = 15.0,
+                            Sqft = 325,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 6, 14, 2, 10, 103, DateTimeKind.Local).AddTicks(8814),
-                            Details = "Ab iure id iure non suscipit et rerum suscipit sequi tempore non.",
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Details = "Numquam reprehenderit excepturi dicta corporis pariatur alias cumque quas fuga qui inventore consectetur fuga id quod.",
                             ImageUrl = "https://i.picsum.photos/id/446/200/200.jpg?hmac=PkaLcCtgL4IvAz-gsxbCXz_tl0qdVUGOrxhYLrywa-c",
-                            Name = "Miss Mekhi Halvorson MD",
-                            Occupancy = 4,
-                            Rate = 8.0,
-                            Sqft = 121,
+                            Name = "Mrs. Foster Skiles",
+                            Occupancy = 7,
+                            Rate = 13.0,
+                            Sqft = 189,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 6, 14, 2, 10, 104, DateTimeKind.Local).AddTicks(1308),
-                            Details = "Et ducimus voluptatibus labore repellendus et distinctio qui repellat minima.",
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Details = "Nihil quae voluptatum ut expedita enim nam beatae consequatur aperiam cumque provident.",
                             ImageUrl = "https://i.picsum.photos/id/602/200/200.jpg?hmac=UQpVCHEMGI1-S-kt8OQLic6TfuG2elfLbLTNDl1mqZE",
-                            Name = "Mr. Brant Nicolas II",
-                            Occupancy = 8,
-                            Rate = 20.0,
-                            Sqft = 103,
+                            Name = "Terrill Doyle DVM",
+                            Occupancy = 1,
+                            Rate = 1.0,
+                            Sqft = 262,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 6, 14, 2, 10, 104, DateTimeKind.Local).AddTicks(6225),
-                            Details = "Aut sint aspernatur mollitia quae voluptate voluptatem inventore dicta rerum ullam eligendi nam.",
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Details = "Delectus possimus nihil dolorem rerum possimus omnis ipsum quidem fugiat reprehenderit omnis nisi minima nemo vero.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Miss Mayra Shannon Ruecker MD",
-                            Occupancy = 5,
-                            Rate = 19.0,
-                            Sqft = 389,
+                            Name = "Mr. Ronaldo Shanna Kihn Jr.",
+                            Occupancy = 3,
+                            Rate = 14.0,
+                            Sqft = 261,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
