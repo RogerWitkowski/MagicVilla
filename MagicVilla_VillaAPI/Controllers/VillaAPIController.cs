@@ -22,7 +22,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
-            _logger.Log("Getting all villas", "");
+            //_logger.Log("Getting all villas", "");
             return Ok(VillaStore.villaList);
         }
 
@@ -34,7 +34,7 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             if (id == 0)
             {
-                _logger.Log("Get Villa Error with Id:" + id, "error");
+                //_logger.Log("Get Villa Error with Id:" + id, "error");
                 return BadRequest();
             }
 
