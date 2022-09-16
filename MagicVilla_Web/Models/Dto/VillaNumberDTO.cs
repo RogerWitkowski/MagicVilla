@@ -1,10 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MagicVilla_Web.Models.Dto
 {
     public class VillaNumberDTO
     {
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
         public int VillaNo { get; set; }
 
         [Required]

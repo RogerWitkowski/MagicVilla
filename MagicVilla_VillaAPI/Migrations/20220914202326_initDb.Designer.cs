@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220911135635_init1")]
-    partial class init1
+    [Migration("20220914202326_initDb")]
+    partial class initDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,50 @@ namespace MagicVilla_VillaAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("MagicVilla_VillaAPI.Models.LocalUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LocalUsers");
+                });
 
             modelBuilder.Entity("MagicVilla_VillaAPI.Models.Villa", b =>
                 {
@@ -72,520 +116,520 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 814, DateTimeKind.Local).AddTicks(8544),
-                            Details = "Consequatur quidem consectetur praesentium ullam voluptatem distinctio cupiditate sit dolor quia sunt deserunt ea.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 0, DateTimeKind.Local).AddTicks(1553),
+                            Details = "Autem ut et aspernatur ut et architecto dolorem et animi nesciunt et ea corrupti inventore consequuntur.",
                             ImageUrl = "https://i.picsum.photos/id/778/200/200.jpg?hmac=fgFK_HI_g_N4MzYuYbssOB8ymhT_m0JK61tNJHfdPYU",
-                            Name = "Nicolas Schuppe",
+                            Name = "Dana Cordie Bednar IV",
                             Occupancy = 3,
-                            Rate = 14.0,
-                            Sqft = 431,
+                            Rate = 13.0,
+                            Sqft = 473,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 815, DateTimeKind.Local).AddTicks(1060),
-                            Details = "Ipsam voluptatum suscipit voluptates quos iusto sint qui vel tempora.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 0, DateTimeKind.Local).AddTicks(4113),
+                            Details = "Corrupti et est voluptate at minus et magni est voluptates.",
                             ImageUrl = "https://i.picsum.photos/id/287/200/200.jpg?hmac=kXFCSMZE2rF7NM-EFSH6c_nl5HlKQWvwCdE8JYL-YNQ",
-                            Name = "Maurice Russel",
-                            Occupancy = 4,
+                            Name = "Kennedi Feest",
+                            Occupancy = 9,
                             Rate = 11.0,
-                            Sqft = 308,
+                            Sqft = 268,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 815, DateTimeKind.Local).AddTicks(3939),
-                            Details = "Quas non tempora molestiae officiis aut velit et natus blanditiis sed vitae ut.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 0, DateTimeKind.Local).AddTicks(6965),
+                            Details = "Blanditiis recusandae iste voluptate sequi aliquam consequuntur dolor necessitatibus id eaque blanditiis nobis molestias.",
                             ImageUrl = "https://i.picsum.photos/id/446/200/200.jpg?hmac=PkaLcCtgL4IvAz-gsxbCXz_tl0qdVUGOrxhYLrywa-c",
-                            Name = "Candido Mraz",
-                            Occupancy = 7,
-                            Rate = 12.0,
-                            Sqft = 386,
+                            Name = "Markus Swaniawski",
+                            Occupancy = 5,
+                            Rate = 8.0,
+                            Sqft = 485,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 815, DateTimeKind.Local).AddTicks(6970),
-                            Details = "Dolorem aliquam corrupti autem aut in non molestiae nihil labore consequatur qui ipsum ullam veritatis.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 0, DateTimeKind.Local).AddTicks(9605),
+                            Details = "Repudiandae molestiae est esse aliquid et sit provident qui consequuntur consectetur.",
                             ImageUrl = "https://i.picsum.photos/id/602/200/200.jpg?hmac=UQpVCHEMGI1-S-kt8OQLic6TfuG2elfLbLTNDl1mqZE",
-                            Name = "Oma Wilderman",
-                            Occupancy = 3,
-                            Rate = 8.0,
-                            Sqft = 401,
+                            Name = "Stephon Robel",
+                            Occupancy = 5,
+                            Rate = 2.0,
+                            Sqft = 269,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 815, DateTimeKind.Local).AddTicks(9562),
-                            Details = "Quos occaecati aut sapiente quia laudantium quas non incidunt aliquam sequi.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 1, DateTimeKind.Local).AddTicks(3749),
+                            Details = "Quia similique nisi enim impedit laborum consequatur id aliquam expedita hic nemo tempore.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Junius Blick",
-                            Occupancy = 4,
-                            Rate = 5.0,
-                            Sqft = 146,
+                            Name = "Ms. Kevon Brown Veum",
+                            Occupancy = 7,
+                            Rate = 9.0,
+                            Sqft = 259,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 6,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 816, DateTimeKind.Local).AddTicks(2073),
-                            Details = "Accusamus architecto nostrum provident ea in occaecati quod possimus sed.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 1, DateTimeKind.Local).AddTicks(6534),
+                            Details = "Quam aut et quo dolor nemo commodi placeat eligendi minus vel repellat ut.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Dorris McKenzie",
-                            Occupancy = 3,
-                            Rate = 7.0,
-                            Sqft = 434,
+                            Name = "Betty Kerluke",
+                            Occupancy = 1,
+                            Rate = 13.0,
+                            Sqft = 497,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 7,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 816, DateTimeKind.Local).AddTicks(4919),
-                            Details = "Dolorem nostrum ipsa deleniti sit voluptas blanditiis sapiente quia neque tenetur enim eligendi.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 2, DateTimeKind.Local).AddTicks(831),
+                            Details = "Corrupti veritatis sit ut dolore natus voluptatem debitis nulla dolore omnis quia eos itaque quos.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Foster Auer V",
-                            Occupancy = 10,
-                            Rate = 2.0,
-                            Sqft = 323,
+                            Name = "Prof. Vince Jacinto Hegmann",
+                            Occupancy = 7,
+                            Rate = 1.0,
+                            Sqft = 191,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 8,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 816, DateTimeKind.Local).AddTicks(7541),
-                            Details = "Quis a perspiciatis ab quos deleniti quibusdam amet fugiat et reiciendis.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 2, DateTimeKind.Local).AddTicks(3841),
+                            Details = "Ut dolorum harum voluptatem incidunt corrupti vero qui inventore deleniti dolores quae nobis suscipit.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Mr. Joelle Murphy",
+                            Name = "Skyla Koelpin",
                             Occupancy = 6,
-                            Rate = 16.0,
-                            Sqft = 185,
+                            Rate = 20.0,
+                            Sqft = 278,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 9,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 817, DateTimeKind.Local).AddTicks(1910),
-                            Details = "Vel maiores sequi quo quod quasi nesciunt quo ut maxime voluptatem voluptas veritatis dicta maxime porro.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 2, DateTimeKind.Local).AddTicks(7865),
+                            Details = "Illum maiores aut sed aut quia temporibus quod corporis repellendus illum neque.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Dr. Guiseppe Raina Schaefer",
-                            Occupancy = 7,
-                            Rate = 2.0,
-                            Sqft = 180,
+                            Name = "Dr. Naomi Anastasia Deckow MD",
+                            Occupancy = 9,
+                            Rate = 3.0,
+                            Sqft = 275,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 10,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 817, DateTimeKind.Local).AddTicks(4415),
-                            Details = "Reiciendis sunt aperiam et perspiciatis nesciunt quisquam voluptatem asperiores eligendi.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 3, DateTimeKind.Local).AddTicks(1889),
+                            Details = "Dolorem dolorem quisquam dolore iusto impedit eius repudiandae fugiat facere ratione.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Lourdes Barrows",
-                            Occupancy = 8,
-                            Rate = 15.0,
-                            Sqft = 400,
+                            Name = "Shayne Bernard McClure DDS",
+                            Occupancy = 3,
+                            Rate = 9.0,
+                            Sqft = 235,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 11,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 817, DateTimeKind.Local).AddTicks(7138),
-                            Details = "Ducimus tempore asperiores non occaecati et quam perspiciatis repellat autem inventore tempore eaque.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 3, DateTimeKind.Local).AddTicks(4411),
+                            Details = "Omnis praesentium molestias eum numquam ab occaecati eos dolore sint.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Jarrell Bogisich",
-                            Occupancy = 10,
-                            Rate = 10.0,
-                            Sqft = 458,
+                            Name = "Ike Nitzsche",
+                            Occupancy = 3,
+                            Rate = 19.0,
+                            Sqft = 375,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 12,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 818, DateTimeKind.Local).AddTicks(102),
-                            Details = "Asperiores sed vitae modi qui sed voluptatem omnis cupiditate voluptatem neque molestiae autem voluptates tempore.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 3, DateTimeKind.Local).AddTicks(7378),
+                            Details = "Repudiandae eligendi rerum dolorem omnis dolore omnis aut accusantium nihil delectus corrupti exercitationem voluptas.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Hailey Hayes",
-                            Occupancy = 3,
-                            Rate = 14.0,
-                            Sqft = 296,
+                            Name = "Marion Rolfson",
+                            Occupancy = 10,
+                            Rate = 9.0,
+                            Sqft = 422,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 13,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 818, DateTimeKind.Local).AddTicks(3242),
-                            Details = "Voluptatum dolorum explicabo omnis inventore nam eos est sed ab rem aut harum eos odio nesciunt.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 4, DateTimeKind.Local).AddTicks(595),
+                            Details = "Saepe dolorem quis enim voluptate et quidem sapiente magnam aliquid harum corrupti maiores eos eaque atque.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Shanel Nienow IV",
-                            Occupancy = 8,
-                            Rate = 18.0,
-                            Sqft = 137,
+                            Name = "Mr. Monique Lubowitz",
+                            Occupancy = 2,
+                            Rate = 17.0,
+                            Sqft = 451,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 14,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 818, DateTimeKind.Local).AddTicks(7325),
-                            Details = "Velit odit sunt numquam accusantium nihil voluptas sunt officiis inventore adipisci alias et.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 4, DateTimeKind.Local).AddTicks(3376),
+                            Details = "Sed omnis et aliquam expedita incidunt ipsum qui et amet quas error.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Pearline Friedrich Hyatt Jr.",
-                            Occupancy = 10,
-                            Rate = 13.0,
-                            Sqft = 126,
+                            Name = "Wilfrid Ebert",
+                            Occupancy = 6,
+                            Rate = 5.0,
+                            Sqft = 496,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 15,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 819, DateTimeKind.Local).AddTicks(286),
-                            Details = "Modi occaecati perferendis iste velit ratione et at qui ut soluta odit autem sunt et.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 4, DateTimeKind.Local).AddTicks(6556),
+                            Details = "Aut sit ad sequi et laudantium sequi eaque esse ab consequuntur iure et corporis odio.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Mariah Rogahn",
-                            Occupancy = 4,
-                            Rate = 14.0,
-                            Sqft = 205,
+                            Name = "Orval Lakin",
+                            Occupancy = 7,
+                            Rate = 5.0,
+                            Sqft = 152,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 16,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 819, DateTimeKind.Local).AddTicks(3424),
-                            Details = "Totam ex nobis qui harum consequuntur ad et ullam et amet et minima omnis atque sunt.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 4, DateTimeKind.Local).AddTicks(9623),
+                            Details = "Rerum velit qui in qui et molestiae deleniti quia suscipit autem magni non aliquam.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Samanta Auer",
-                            Occupancy = 8,
-                            Rate = 2.0,
-                            Sqft = 286,
+                            Name = "Alexandre Hermiston",
+                            Occupancy = 3,
+                            Rate = 4.0,
+                            Sqft = 432,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 17,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 819, DateTimeKind.Local).AddTicks(6115),
-                            Details = "Aut possimus dignissimos in et ab cum doloribus dolores tempora aut laborum.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 5, DateTimeKind.Local).AddTicks(2333),
+                            Details = "Vero accusamus ipsum aut tempora incidunt inventore iure asperiores numquam.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Jessica Streich",
-                            Occupancy = 3,
-                            Rate = 4.0,
-                            Sqft = 316,
+                            Name = "Kian Dare",
+                            Occupancy = 4,
+                            Rate = 10.0,
+                            Sqft = 263,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 18,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 819, DateTimeKind.Local).AddTicks(8826),
-                            Details = "Eveniet ipsa quos voluptatem et voluptatem architecto corporis neque nulla dolore ea similique.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 5, DateTimeKind.Local).AddTicks(5323),
+                            Details = "Sed temporibus dolore et ratione molestiae explicabo cupiditate quis id voluptatem provident totam.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Deshaun Berge III",
-                            Occupancy = 1,
-                            Rate = 7.0,
-                            Sqft = 110,
+                            Name = "Bria Greenholt",
+                            Occupancy = 5,
+                            Rate = 17.0,
+                            Sqft = 352,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 19,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 820, DateTimeKind.Local).AddTicks(1740),
-                            Details = "Tempore enim ea voluptatum non quaerat consequatur neque fugiat ut nostrum unde rerum.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 5, DateTimeKind.Local).AddTicks(8094),
+                            Details = "Ut doloremque quisquam est sequi voluptas ut id voluptate corporis.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Ms. Elta Mann",
-                            Occupancy = 8,
-                            Rate = 19.0,
-                            Sqft = 279,
+                            Name = "Marianna Kuhn Jr.",
+                            Occupancy = 7,
+                            Rate = 12.0,
+                            Sqft = 179,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 20,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 820, DateTimeKind.Local).AddTicks(5864),
-                            Details = "Porro similique aperiam reiciendis qui nesciunt recusandae quia in velit quae et veniam.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 6, DateTimeKind.Local).AddTicks(849),
+                            Details = "Et blanditiis voluptates qui deserunt quidem accusantium rem iure repellat.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Dr. Kamren Hildegard West III",
-                            Occupancy = 7,
-                            Rate = 16.0,
-                            Sqft = 492,
+                            Name = "Bethel Oberbrunner",
+                            Occupancy = 5,
+                            Rate = 19.0,
+                            Sqft = 187,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 21,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 820, DateTimeKind.Local).AddTicks(9855),
-                            Details = "Officia quasi laudantium laboriosam porro id rem ut eveniet vitae cupiditate.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 6, DateTimeKind.Local).AddTicks(3822),
+                            Details = "Magni ut rerum dolorem inventore dolores officia voluptas consequatur rem nihil voluptatem.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Bryana Flo Frami Jr.",
-                            Occupancy = 9,
-                            Rate = 13.0,
-                            Sqft = 209,
+                            Name = "Scarlett Lehner",
+                            Occupancy = 6,
+                            Rate = 10.0,
+                            Sqft = 315,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 22,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 821, DateTimeKind.Local).AddTicks(2531),
-                            Details = "Quis qui voluptatem voluptatem id delectus consequuntur aut optio excepturi voluptas.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 6, DateTimeKind.Local).AddTicks(8314),
+                            Details = "Modi incidunt voluptas sequi esse dolor odit animi asperiores eius deserunt repellat consequatur id.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Stone Metz",
-                            Occupancy = 1,
-                            Rate = 5.0,
-                            Sqft = 156,
+                            Name = "Miss Edythe Matteo Goyette",
+                            Occupancy = 6,
+                            Rate = 20.0,
+                            Sqft = 116,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 23,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 821, DateTimeKind.Local).AddTicks(5377),
-                            Details = "Ipsa nihil hic qui voluptatibus voluptas ut voluptatum explicabo dolores rerum sed similique.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 7, DateTimeKind.Local).AddTicks(1374),
+                            Details = "Et voluptatem corrupti dolorem illo quis reiciendis molestiae voluptatem expedita corporis omnis eum.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Nyah Kunde",
-                            Occupancy = 5,
-                            Rate = 9.0,
-                            Sqft = 167,
+                            Name = "Cameron Rempel",
+                            Occupancy = 4,
+                            Rate = 4.0,
+                            Sqft = 432,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 24,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 821, DateTimeKind.Local).AddTicks(8622),
-                            Details = "Sequi ea voluptates ut provident optio ut velit porro excepturi aperiam quia natus nemo.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 7, DateTimeKind.Local).AddTicks(4049),
+                            Details = "Nesciunt sed dolore non enim rerum vel magni voluptas occaecati.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Sonya Rempel",
-                            Occupancy = 6,
-                            Rate = 2.0,
-                            Sqft = 222,
+                            Name = "Kamille Fay",
+                            Occupancy = 9,
+                            Rate = 15.0,
+                            Sqft = 234,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 25,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 822, DateTimeKind.Local).AddTicks(1753),
-                            Details = "Eaque voluptatum accusantium libero unde nihil eius repellat maiores magni possimus et iste aliquam aut.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 7, DateTimeKind.Local).AddTicks(6931),
+                            Details = "Perferendis voluptas non id pariatur voluptate sed ratione cupiditate provident odio velit.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Dr. Anika Wiegand",
-                            Occupancy = 4,
-                            Rate = 16.0,
-                            Sqft = 220,
+                            Name = "Sherwood Bechtelar PhD",
+                            Occupancy = 3,
+                            Rate = 4.0,
+                            Sqft = 161,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 26,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 822, DateTimeKind.Local).AddTicks(4656),
-                            Details = "Neque consequatur non corporis ut alias facere tempore quisquam dolore sed.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 8, DateTimeKind.Local).AddTicks(261),
+                            Details = "Ducimus inventore tempora hic vel consectetur sed ea tenetur at repudiandae eum ea officiis rem omnis.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Sydnee Hauck",
-                            Occupancy = 8,
-                            Rate = 1.0,
-                            Sqft = 226,
+                            Name = "Austyn Murray",
+                            Occupancy = 9,
+                            Rate = 18.0,
+                            Sqft = 280,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 27,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 822, DateTimeKind.Local).AddTicks(7393),
-                            Details = "Amet corrupti totam dolores eligendi voluptatem et fugit quo quo.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 8, DateTimeKind.Local).AddTicks(4215),
+                            Details = "Ipsa maiores expedita odit sunt voluptatem rerum possimus et officia.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Jessyca Will",
-                            Occupancy = 2,
-                            Rate = 8.0,
-                            Sqft = 295,
+                            Name = "Willie Eryn Mohr III",
+                            Occupancy = 6,
+                            Rate = 12.0,
+                            Sqft = 183,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 28,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 823, DateTimeKind.Local).AddTicks(66),
-                            Details = "Deleniti et quae veritatis et placeat corporis illum similique qui.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 8, DateTimeKind.Local).AddTicks(6922),
+                            Details = "Repudiandae consequuntur nostrum distinctio eveniet ipsa expedita explicabo iure aut quaerat.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Dr. Oscar Kuhn PhD",
-                            Occupancy = 5,
+                            Name = "Jake Mueller MD",
+                            Occupancy = 10,
                             Rate = 16.0,
-                            Sqft = 169,
+                            Sqft = 414,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 29,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 823, DateTimeKind.Local).AddTicks(2712),
-                            Details = "Dolorem et sequi recusandae eligendi cupiditate quibusdam ea sapiente voluptatem aut.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 8, DateTimeKind.Local).AddTicks(9468),
+                            Details = "Incidunt et soluta dolorem ipsam dolores aliquam distinctio magnam est.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Jerome Shields",
-                            Occupancy = 1,
+                            Name = "Velva Hermann Jr.",
+                            Occupancy = 2,
                             Rate = 8.0,
-                            Sqft = 333,
+                            Sqft = 128,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 30,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 823, DateTimeKind.Local).AddTicks(5882),
-                            Details = "Modi totam qui cum sunt et est itaque magni enim illum sint quis aliquam.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 9, DateTimeKind.Local).AddTicks(2327),
+                            Details = "Vel est tenetur repellat natus ipsa nesciunt qui omnis quo recusandae ut ea et.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Ora Hansen",
-                            Occupancy = 6,
-                            Rate = 5.0,
-                            Sqft = 363,
+                            Name = "Arnulfo Mante III",
+                            Occupancy = 9,
+                            Rate = 10.0,
+                            Sqft = 373,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 31,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 823, DateTimeKind.Local).AddTicks(8742),
-                            Details = "Nemo hic numquam aut reiciendis minima quo ea qui error dolores laboriosam veritatis.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 9, DateTimeKind.Local).AddTicks(5324),
+                            Details = "Hic numquam reiciendis quasi voluptas assumenda neque laborum et praesentium quo non et exercitationem.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Dr. Earnestine Bednar",
-                            Occupancy = 4,
-                            Rate = 8.0,
-                            Sqft = 158,
+                            Name = "Ms. Torey McGlynn III",
+                            Occupancy = 10,
+                            Rate = 3.0,
+                            Sqft = 410,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 32,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 824, DateTimeKind.Local).AddTicks(1981),
-                            Details = "Qui autem suscipit harum natus sunt consequatur non sunt saepe ipsam architecto sed enim sit.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 9, DateTimeKind.Local).AddTicks(8191),
+                            Details = "Aut illo quam delectus consequatur dolor et et mollitia fuga porro aut voluptas nobis.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Jedediah Homenick",
-                            Occupancy = 5,
-                            Rate = 19.0,
-                            Sqft = 190,
+                            Name = "Annalise Jewess",
+                            Occupancy = 6,
+                            Rate = 2.0,
+                            Sqft = 395,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 33,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 824, DateTimeKind.Local).AddTicks(4887),
-                            Details = "Est necessitatibus porro officia inventore cum nihil numquam asperiores dolor veritatis nam.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 10, DateTimeKind.Local).AddTicks(821),
+                            Details = "Quis facilis hic occaecati excepturi dolor cumque dolorem voluptatibus blanditiis nulla.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Buford Cronin",
-                            Occupancy = 4,
-                            Rate = 15.0,
-                            Sqft = 401,
+                            Name = "Andres Funk MD",
+                            Occupancy = 3,
+                            Rate = 20.0,
+                            Sqft = 112,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 34,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 824, DateTimeKind.Local).AddTicks(7637),
-                            Details = "Voluptates ipsam debitis est quas repudiandae sint sit dolor aut ex.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 10, DateTimeKind.Local).AddTicks(4603),
+                            Details = "Atque voluptatum ut quo libero dignissimos voluptas quibusdam incidunt reprehenderit.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Mr. Stanton Swaniawski",
-                            Occupancy = 9,
-                            Rate = 8.0,
-                            Sqft = 436,
+                            Name = "Ms. Federico Arturo Robel III",
+                            Occupancy = 7,
+                            Rate = 3.0,
+                            Sqft = 474,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 35,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 825, DateTimeKind.Local).AddTicks(728),
-                            Details = "Accusamus et maiores et consectetur consequatur mollitia quasi quae consequatur culpa quis ipsa dolorem ipsam nisi.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 10, DateTimeKind.Local).AddTicks(7513),
+                            Details = "Et dolorem est eos eos et eum maiores porro est et sunt et aut labore.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Ken Hahn DDS",
-                            Occupancy = 2,
-                            Rate = 14.0,
-                            Sqft = 341,
+                            Name = "Abdullah Hilll",
+                            Occupancy = 1,
+                            Rate = 11.0,
+                            Sqft = 381,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 36,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 825, DateTimeKind.Local).AddTicks(3286),
-                            Details = "Aliquam aliquam est architecto eum sunt labore quo ipsa placeat velit.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 11, DateTimeKind.Local).AddTicks(193),
+                            Details = "Qui dicta accusantium qui molestias rerum sapiente alias id repellat sapiente facere.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Prof. Reva Rippin Jr.",
-                            Occupancy = 10,
-                            Rate = 18.0,
-                            Sqft = 408,
+                            Name = "Zena Koss",
+                            Occupancy = 5,
+                            Rate = 16.0,
+                            Sqft = 318,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 37,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 825, DateTimeKind.Local).AddTicks(5884),
-                            Details = "Perspiciatis et eaque et fugiat maiores cupiditate totam iure nihil libero.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 11, DateTimeKind.Local).AddTicks(2905),
+                            Details = "Nisi qui rem debitis rerum ipsum sunt debitis quisquam voluptates ut placeat.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Gladyce Murazik",
+                            Name = "Arvel Grimes PhD",
                             Occupancy = 1,
-                            Rate = 14.0,
-                            Sqft = 450,
+                            Rate = 11.0,
+                            Sqft = 291,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 38,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 825, DateTimeKind.Local).AddTicks(8856),
-                            Details = "Dicta fuga laboriosam molestiae maxime ratione sapiente omnis esse soluta officia illo fugiat dolorum assumenda.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 11, DateTimeKind.Local).AddTicks(7030),
+                            Details = "A velit in quibusdam rerum doloribus laboriosam cupiditate perspiciatis officiis impedit ipsa earum.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Lora Koepp",
-                            Occupancy = 7,
-                            Rate = 6.0,
-                            Sqft = 483,
+                            Name = "Dessie Zack Schroeder PhD",
+                            Occupancy = 3,
+                            Rate = 13.0,
+                            Sqft = 441,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 39,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 826, DateTimeKind.Local).AddTicks(1563),
-                            Details = "Aliquid eius ducimus atque inventore provident quia fugiat corporis architecto odit rerum.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 12, DateTimeKind.Local).AddTicks(1064),
+                            Details = "Itaque ducimus iste architecto fugit iste placeat sint necessitatibus quae ad consequatur saepe.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Miss Bud Stokes DDS",
+                            Name = "Ewell Orin Schultz DDS",
                             Occupancy = 2,
-                            Rate = 1.0,
-                            Sqft = 190,
+                            Rate = 10.0,
+                            Sqft = 162,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 40,
                             Amenity = "",
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 826, DateTimeKind.Local).AddTicks(4382),
-                            Details = "Ut sed aut rerum fugiat iusto eum at unde error totam qui autem perferendis.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 26, 12, DateTimeKind.Local).AddTicks(4289),
+                            Details = "Quo dolor quaerat nemo ullam dolore beatae sint et ratione qui est cumque illo eius voluptate.",
                             ImageUrl = "https://i.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE",
-                            Name = "Otis Padberg IV",
+                            Name = "Virginie Lynch",
                             Occupancy = 6,
-                            Rate = 17.0,
-                            Sqft = 430,
+                            Rate = 8.0,
+                            Sqft = 255,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -618,152 +662,152 @@ namespace MagicVilla_VillaAPI.Migrations
                         new
                         {
                             VillaNo = 101,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(944),
-                            SpecialDetails = "Placeat rerum deserunt est voluptas similique soluta odio consequatur et placeat.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 996, DateTimeKind.Local).AddTicks(3449),
+                            SpecialDetails = "Fugit odit omnis tenetur ex veniam neque ut mollitia ut aut voluptates.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 102,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(2484),
-                            SpecialDetails = "Pariatur quis aut repellendus eum suscipit quis ad blanditiis accusamus amet ipsam corporis dolores labore quos.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 996, DateTimeKind.Local).AddTicks(5140),
+                            SpecialDetails = "Molestiae quam deleniti et unde quia non perspiciatis sed nulla maxime.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 103,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(3770),
-                            SpecialDetails = "Aut et dignissimos quidem qui sunt assumenda consequuntur explicabo velit repellendus error sed.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 996, DateTimeKind.Local).AddTicks(6765),
+                            SpecialDetails = "Odio sapiente dolor dicta doloremque et dolor quae voluptatem magni ut.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 104,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(4729),
-                            SpecialDetails = "Rerum sapiente est fugit provident nostrum laboriosam occaecati sit praesentium.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 996, DateTimeKind.Local).AddTicks(8765),
+                            SpecialDetails = "Vero voluptatem id doloribus sit dolor odio molestias sunt laudantium consequatur quibusdam a iste.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 105,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(5689),
-                            SpecialDetails = "Itaque occaecati earum accusantium nesciunt eum illum vel maiores expedita.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 997, DateTimeKind.Local).AddTicks(264),
+                            SpecialDetails = "Soluta et nam iusto corrupti illo facilis est odit reprehenderit.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 106,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(7107),
-                            SpecialDetails = "Ducimus sunt in ipsam quia et sed quo incidunt omnis explicabo saepe quidem qui sint.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 997, DateTimeKind.Local).AddTicks(1843),
+                            SpecialDetails = "Laboriosam sunt pariatur enim rerum dolor fuga voluptas sed fugit provident.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 107,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 812, DateTimeKind.Local).AddTicks(8500),
-                            SpecialDetails = "Aut fuga dolorem blanditiis eligendi vel quam qui aperiam in officia non minus impedit voluptatem.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 997, DateTimeKind.Local).AddTicks(3298),
+                            SpecialDetails = "Quia explicabo qui et nobis repudiandae ut dolor consequatur reiciendis.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 109,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(1176),
-                            SpecialDetails = "Consectetur doloribus eligendi et ut aliquam voluptates unde rerum quia quam temporibus ut rerum velit est.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 997, DateTimeKind.Local).AddTicks(5608),
+                            SpecialDetails = "Exercitationem qui quia repellat dolorum qui veritatis et nulla tempore aut corrupti totam id itaque quis.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 110,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(2535),
-                            SpecialDetails = "Sed atque praesentium qui repellendus qui est velit voluptatem eos cum enim ut.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 997, DateTimeKind.Local).AddTicks(7893),
+                            SpecialDetails = "Voluptas tempora unde dicta quod cum et exercitationem laborum et totam ipsam ipsa hic et aut.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 1
                         },
                         new
                         {
                             VillaNo = 201,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(3719),
-                            SpecialDetails = "Omnis est aut a minima quae aut voluptatem debitis non error odio.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 998, DateTimeKind.Local).AddTicks(53),
+                            SpecialDetails = "Iure neque eum ea ut voluptatem assumenda molestiae dicta inventore tempora dignissimos ipsam nam architecto.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 202,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(4874),
-                            SpecialDetails = "Recusandae molestiae ea possimus illum est commodi nam perspiciatis beatae sequi quod.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 998, DateTimeKind.Local).AddTicks(1947),
+                            SpecialDetails = "Tempore amet deleniti consectetur reiciendis assumenda ex adipisci autem unde et sunt aliquid.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 203,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(6276),
-                            SpecialDetails = "Eaque ut quod nesciunt aut voluptatem et distinctio quasi incidunt minus facilis quos voluptas mollitia.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 998, DateTimeKind.Local).AddTicks(3940),
+                            SpecialDetails = "Aliquam est illum dolorem sed provident exercitationem rerum odit ipsam distinctio dolorem et in.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 204,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(7637),
-                            SpecialDetails = "Illum quia saepe excepturi aut et id dolores aperiam error quas sit dolor commodi.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 998, DateTimeKind.Local).AddTicks(5687),
+                            SpecialDetails = "Autem et dolorem non et autem eum accusamus earum fuga eaque quam.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 205,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 813, DateTimeKind.Local).AddTicks(9086),
-                            SpecialDetails = "Eum explicabo rem ea tenetur qui possimus vitae sunt non voluptatibus esse corporis aut exercitationem.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 998, DateTimeKind.Local).AddTicks(7371),
+                            SpecialDetails = "Occaecati adipisci libero deleniti voluptatum praesentium exercitationem doloribus veritatis omnis sunt accusamus.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 206,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 814, DateTimeKind.Local).AddTicks(187),
-                            SpecialDetails = "Voluptas rerum nam nemo aut repellat illum in molestias exercitationem consequatur.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 998, DateTimeKind.Local).AddTicks(9536),
+                            SpecialDetails = "Expedita aspernatur nulla alias labore nulla corrupti optio voluptatem debitis ipsum accusamus dolor dignissimos vero.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 207,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 814, DateTimeKind.Local).AddTicks(1629),
-                            SpecialDetails = "Quisquam porro aut explicabo soluta similique accusamus consequatur sed iste porro eaque facilis doloremque aperiam.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 999, DateTimeKind.Local).AddTicks(1525),
+                            SpecialDetails = "Et ea nihil accusantium rem quidem dolorum quis a id sunt voluptatem vitae qui consectetur velit.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 208,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 814, DateTimeKind.Local).AddTicks(3226),
-                            SpecialDetails = "Facilis asperiores est rerum quod ut et provident eius commodi ut necessitatibus reiciendis voluptas dolorem officia.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 999, DateTimeKind.Local).AddTicks(3531),
+                            SpecialDetails = "Magnam ipsa nihil voluptatibus assumenda et nulla incidunt labore id eligendi consequatur omnis dicta asperiores exercitationem.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 209,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 814, DateTimeKind.Local).AddTicks(4175),
-                            SpecialDetails = "Corporis amet consequatur autem rem in sapiente sed officia inventore.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 999, DateTimeKind.Local).AddTicks(5559),
+                            SpecialDetails = "Excepturi tempora dolores eligendi qui hic ut omnis maiores reiciendis quo est aliquid.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         },
                         new
                         {
                             VillaNo = 210,
-                            CreatedDate = new DateTime(2022, 9, 11, 15, 56, 34, 814, DateTimeKind.Local).AddTicks(5232),
-                            SpecialDetails = "Dolorem velit ab blanditiis libero earum qui sunt mollitia nisi aut.",
+                            CreatedDate = new DateTime(2022, 9, 14, 22, 23, 25, 999, DateTimeKind.Local).AddTicks(6634),
+                            SpecialDetails = "Et cumque ex consequatur iusto corrupti voluptas ullam quibusdam dolores vel.",
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaId = 2
                         });
