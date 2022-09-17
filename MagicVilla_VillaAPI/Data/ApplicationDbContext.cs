@@ -164,7 +164,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -176,7 +176,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -188,7 +188,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -200,7 +200,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -212,7 +212,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -224,7 +224,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -236,7 +236,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -248,7 +248,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -260,7 +260,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -272,7 +272,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -284,7 +284,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -296,7 +296,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -308,7 +308,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -320,7 +320,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -332,7 +332,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -344,7 +344,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -356,7 +356,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -368,7 +368,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -380,7 +380,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -392,7 +392,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -404,7 +404,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -416,7 +416,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -428,7 +428,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -440,7 +440,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -452,7 +452,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -464,7 +464,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -476,7 +476,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -488,7 +488,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -500,7 +500,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -512,7 +512,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -524,7 +524,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -536,7 +536,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -548,7 +548,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -560,7 +560,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -572,7 +572,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -584,7 +584,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -596,7 +596,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -608,7 +608,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -620,7 +620,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             },
             new Villa()
@@ -632,7 +632,7 @@ namespace MagicVilla_VillaAPI.Data
                 Occupancy = Faker.RandomNumber.Next(1, 10),
                 Rate = Faker.RandomNumber.Next(1, 20),
                 Sqft = Faker.RandomNumber.Next(100, 500),
-                Amenity = "",
+                Amenity = Faker.Lorem.Sentence(10),
                 CreatedDate = DateTime.Now
             });
         }
