@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using MagicVilla_VillaAPI.Repository;
 using MagicVilla_VillaAPI.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -23,6 +24,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 });
 
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
+
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStore<ApplicationDbContext>();
 
 builder.Services.AddResponseCaching();
 
